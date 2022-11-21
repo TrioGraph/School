@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { NavData } from '../side-nav/nav-data';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,6 +9,12 @@ export class HomeComponent implements OnInit {
   
   @Input() collapsed = false;
   @Input() screenWidth = 0;
+  public navItems = NavData;
+  collapseSidePanel: boolean = true;
+  // faBars = faBars;
+  public perfectScrollbarConfig = {
+    suppressScrollX: true,
+  };
 
   ngOnInit(): void {
   }
@@ -21,6 +27,10 @@ export class HomeComponent implements OnInit {
       styleClass = 'body-md-screen'
     }
     return styleClass;
+  }
+
+  toggleSidePanel() {
+    this.collapseSidePanel = !this.collapseSidePanel;
   }
 
 }

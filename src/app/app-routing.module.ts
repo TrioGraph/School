@@ -5,6 +5,7 @@ import { ExamComponent } from './exam/exam.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeComponent } from './home/home.component';
 import { NewAdmissionComponent } from './new-admission/new-admission.component';
+import { ProductsComponent } from './products/products.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { StudentComponent } from './student/student.component';
@@ -24,6 +25,8 @@ const routes: Routes = [
       { path: 'student', component: StudentComponent },
       { path: 'teacher', component: TeacherComponent },
       { path: 'time-table', component: TimeTableComponent },
+      { path: 'products', component: ProductsComponent },
+      
     ]
     
   },

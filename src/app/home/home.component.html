@@ -1,5 +1,40 @@
-<side-nav></side-nav>
+<!-- <side-nav></side-nav>
 
 <div class="body" [ngClass]="getBodyClass()">
     <router-outlet></router-outlet>
+</div> -->
+
+<div class="wrapper">
+  <div class="row m-0 headerStyle">
+      <div class="col-md-3 col-sm-12">
+          <div class="logo-image">
+            <img src="assets/TrioGraphLogo2.png" style="height: 40px;">
+            &nbsp;
+            &nbsp;
+          <i class="bi bi-list" (click)="toggleSidePanel()"></i>
+
+          </div>
+      </div>
+      <div class="col-md-9 col-sm-12">
+          <!-- <button class="btn btn-secondary" style="width: 40px;" (click)="toggleSidePanel()"> -->
+            <!-- <i class="fa-solid fa-bars" (click)="toggleSidePanel()"></i>
+            <i class="fa-sharp fa-solid fa-bars" (click)="toggleSidePanel()"></i> -->
+            <!-- <fa-icon [icon]="faBars"></fa-icon> -->
+          <!-- </button> -->
+
+      </div>
+  </div>
+
+      <div class="row m-0 main rowStyle g-0">
+          <div *ngIf="!collapseSidePanel" class="col-md-3 col-sm-12 sidePanelStyle">
+            <side-nav></side-nav>
+          </div>
+          <div [ngClass]="{'col-md-12 col-sm-12' : collapseSidePanel, 'col-md-9 col-sm-12' : !collapseSidePanel }" class="contentStyle">
+                <router-outlet></router-outlet>
+          </div>
+      </div>
+
+      <div class="row m-0 footerStyle">
+          Footer
+      </div>
 </div>

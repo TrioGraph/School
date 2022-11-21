@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,8 @@ import { TimeTableComponent } from './time-table/time-table.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProductsComponent } from './products/products.component';
+
 
 @NgModule({
   declarations: [
@@ -29,14 +33,18 @@ import { SettingsComponent } from './settings/settings.component';
     TimeTableComponent,
     AccountsComponent,
     TeacherComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
