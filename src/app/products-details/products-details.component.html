@@ -1,0 +1,51 @@
+<div class="container">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <label for="product_id">Product Id:</label>
+          <input type="text" formControlName="product_id" id="name" class="form-control" placeholder="Name" required [ngClass]="{ 'is-invalid': productForm.controls['product_id'].touched && productForm.controls['product_id'].errors, 'is-valid': productForm.controls['product_id'].valid }">
+          <div *ngIf="productForm.controls['product_id'].touched && productForm.controls['product_id'].errors" class="invalid-feedback">
+            <div *ngIf="productForm.controls['product_id'].errors">Name is required!</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="form-group">
+            <label for="product_name">Product Name:</label>
+            <input type="text" formControlName="product_name" id="product_name" class="form-control" placeholder="Product Name" required [ngClass]="{ 'is-invalid': productForm.controls['product_name'].touched && productForm.controls['product_name'].errors, 'is-valid': productForm.controls['product_name'].valid }">
+            <div *ngIf="productForm.controls['product_name'].touched && productForm.controls['product_name'].errors" class="invalid-feedback">
+              <div *ngIf="productForm.controls['product_name'].errors">Name is required!</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label for="product_price">Product Price:</label>
+                <input type="text" formControlName="product_price" id="product_price" class="form-control" placeholder="Price" required [ngClass]="{ 'is-invalid': productForm.controls['product_price'].touched && productForm.controls['product_price'].errors, 'is-valid': productForm.controls['product_price'].valid }">
+                <div *ngIf="productForm.controls['product_price'].touched && productForm.controls['product_price'].errors" class="invalid-feedback">
+                  <div *ngIf="productForm.controls['product_price'].errors">Product price is required!</div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+<br>
+            <div class="row">
+      <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"></div> -->
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="form-group">
+          <button type="submit" [disabled]="productForm.invalid" class="btn btn-primary"> Submit </button>
+        </div>
+      </div>
+      <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"></div> -->
+    </div>
+    </form>
+  </div>

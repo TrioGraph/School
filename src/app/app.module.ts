@@ -18,6 +18,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductsDetailsComponent } from './products-details/products-details.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { ProductsComponent } from './products/products.component';
     TeacherComponent,
     SettingsComponent,
     ProductsComponent,
+    ProductsDetailsComponent,
   ],
   imports: [
     BrowserModule,

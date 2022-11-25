@@ -22,22 +22,30 @@ export class ProductsComponent implements OnInit {
 
   addProduct() {
     // this.displayAddForm = !this.displayAddForm;
-    this.appService.addProduct().subscribe(data => {
-      console.log(data);
-    },
-    (err) => {
-      console.log(err);
-    }
-    );
+    // this.appService.addProduct().subscribe(data => {
+    //   console.log(data);
+    // },
+    // (err) => {
+    //   console.log(err);
+    // }
+    // );
   }
 
-  deleteProoduct() {
+  deleteProoduct(productId: any) {
  // this.confirmationService.confirm({
     //     message: 'Are you sure that you want to perform this action?',
     //     accept: () => {
     //         //Actual logic to perform a confirmation
     //     }
     // });
+
+    if(confirm("Are you sure to delete ")) {
+      console.log("Implement delete functionality here");
+      this.appService.deleteProduct(productId).subscribe(data => {
+          alert('Deleted Successfully');
+      });
+    }
+
   }
 
  
